@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap');
+
+.signika {
+  font-family: 'Signika', sans-serif;
+}
+
+.text-shadow {
+  filter: drop-shadow(0 3px 0 #fe0000);
+  text-shadow:
+    3px 0 #fe0000,
+    -2px 0 #fe0000,
+    0 2px #fe0000,
+    0 -2px #fe0000,
+    -2px -2px #fe0000,
+    3px 2px #fe0000,
+    -2px 2px #fe0000,
+    3px -2px #fe0000;
+}
+
+.flash-icon {
+  text-shadow: none;
+  filter: none;
+  position: relative;
+  color: #ffc00e;
+  padding: 0 8px;
+  background: -webkit-linear-gradient(#ffc90d, #fff7e0);
+  rotate: 12deg;
+  scale: 2.5;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
