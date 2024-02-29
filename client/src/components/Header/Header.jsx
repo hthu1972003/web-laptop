@@ -11,7 +11,7 @@ import {
   RocketIcon,
   SketchLogoIcon
 } from '@radix-ui/react-icons'
-import { Box, DropdownMenu, IconButton, TextField } from '@radix-ui/themes'
+import { Box, DropdownMenu, IconButton, TextField } from '@radix-ui/themes' // import from @radix-ui/react-icons
 
 function Header() {
   return (
