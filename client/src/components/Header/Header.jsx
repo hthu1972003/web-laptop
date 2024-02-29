@@ -18,7 +18,11 @@ function Header() {
     <header className='h-[132px]'>
       <div className='bg-[#fe0000] h-[88px] fixed top-0 left-0 right-0 z-20'>
         <div className='max-w-[1200px] h-full m-auto flex items-center gap-8'>
-          <img src='https://www.nguyenkim.com/images/companies/_1/html/2017/T11/homepage/Logo_NK.svg' alt='' />
+          <img
+            className='cursor-pointer'
+            src='https://www.nguyenkim.com/images/companies/_1/html/2017/T11/homepage/Logo_NK.svg'
+            alt=''
+          />
           <div className='flex-1'>
             <TextField.Root radius='full'>
               <TextField.Slot>
@@ -33,19 +37,19 @@ function Header() {
             </TextField.Root>
           </div>
           <div className='flex gap-4'>
-            <div className='flex gap-2 items-center justify-center text-white'>
+            <div className='cursor-pointer flex gap-2 items-center justify-center text-white'>
               <CubeIcon height={24} width={24} />
               <div className='text-sm font-medium'>Giỏ hàng</div>
             </div>
-            <div className='flex gap-2 items-center justify-center text-white'>
+            <div className='cursor-pointer flex gap-2 items-center justify-center text-white'>
               <CheckCircledIcon height={24} width={24} />
               <div className='text-sm font-medium'>Tra cứu đơn hàng</div>
             </div>
-            <div className='flex gap-2 items-center justify-center text-white'>
+            <div className='cursor-pointer flex gap-2 items-center justify-center text-white'>
               <PersonIcon height={24} width={24} />
               <div className='text-sm font-medium'>Tài khoản</div>
             </div>
-            <div className='flex gap-2 items-center justify-center text-white'>
+            <div className='cursor-pointer flex gap-2 items-center justify-center text-white'>
               <MobileIcon height={24} width={24} />
               <div className='text-sm font-medium'>Gọi mua: 1800.6800</div>
             </div>
