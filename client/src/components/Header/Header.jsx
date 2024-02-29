@@ -15,8 +15,8 @@ import { Box, DropdownMenu, IconButton, TextField } from '@radix-ui/themes'
 
 function Header() {
   return (
-    <header>
-      <div className='bg-[#fe0000] h-[88px]'>
+    <header className='h-[132px]'>
+      <div className='bg-[#fe0000] h-[88px] fixed top-0 left-0 right-0 z-20'>
         <div className='max-w-[1200px] h-full m-auto flex items-center gap-8'>
           <img src='https://www.nguyenkim.com/images/companies/_1/html/2017/T11/homepage/Logo_NK.svg' alt='' />
           <div className='flex-1'>
@@ -52,7 +52,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className='h-[44px]'>
+      <div className='bg-white h-[44px] fixed top-[88px] left-0 right-0 z-20  border-b border-red-100'>
         <div className='max-w-[1200px] h-full m-auto flex items-center'>
           <div className='flex-1 cursor-pointer border-r border-gray-300'>
             <DropdownMenu.Root>
