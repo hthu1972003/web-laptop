@@ -1,24 +1,13 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
 import { Badge, Box, Card, Inset, Strong, Text } from '@radix-ui/themes'
 import { useState } from 'react'
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
-
-// Import Swiper styles
+import { Navigation, Mousewheel, Keyboard, Autoplay } from 'swiper/modules'
+import { formatCurrency, rateSale } from '~/utils/utils'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-
-// import required modules
-import { Navigation, Mousewheel, Keyboard, Autoplay } from 'swiper/modules'
-import { formatCurrency, rateSale } from '~/utils/utils'
-
-const slides = [
-  'https://cdn.nguyenkimmall.com/images/promo/918/644.jpg',
-  'https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0224/TAN_XUAN/Home/Homepage-Banner_694x376px_MDA2.jpg',
-  'https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0224/TAN_XUAN/Home/Homepage-Banner_694x376px_DIG2.jpg',
-  'https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0224/Dealsheet/AV/694x376.jpg'
-]
+import { homeSlides as slides } from '~/constants/slide'
 
 const randomArr = [
   {
@@ -74,7 +63,8 @@ function Home() {
     }
     return selectedProducts
   }
-  getRandomArr()
+
+  const selectedProducts = getRandomArr()
 
   return (
     <div className='bg-[#f5f6f8] py-2'>
@@ -169,7 +159,7 @@ function Home() {
               {Array.from({ length: 20 }).map((_, index) => (
                 <SwiperSlide key={index}>
                   <div className='grid grid-rows-2 grid-flow-col gap-3'>
-                    {getRandomArr().map((product) => (
+                    {selectedProducts.map((product) => (
                       <Card
                         key={product.id}
                         className='cursor-pointer hover:shadow-lg min-w-[225px] pt-4 pb-8 px-2'
